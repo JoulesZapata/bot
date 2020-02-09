@@ -1,5 +1,5 @@
 {
-    "name": "bot",
+    "name": "GPjs",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -7,7 +7,7 @@
         "dev": "tsc -w"
     },
     "keywords": [],
-    "author": "",
+    "author": "getpost&wedarobi",
     "license": "ISC",
     "dependencies": {
         "@types/isomorphic-fetch": "0.0.35",

@@ -16,6 +16,8 @@ export const isCommand = (msg: string): string => {
 }
 
 export const runCommand = async ({ target, context, msg, command }): Promise<Reply> => {
-    if (coolDown(target, command)) return { msg: 'cooldown', cooldown: true }
+    if (coolDown(target, command)) {
+        return { msg: 'cooldown', cooldown: true }
+    }
     return await commands[command]({ target, context, msg, command })
 }

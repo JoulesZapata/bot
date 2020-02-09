@@ -1,7 +1,7 @@
-const rps = ({ target, context, msg, command }): Reply => {
+const rps = ({ msg }): Reply => {
     let item = msg.split(' ')[1]
 
-    if (!item) return { msg: 'Enter a valid item (Rock, Paper, Scissors)' }
+    if (!item) return { msg: 'Enter a valid item (Rock, Paper, Scissors), ' }
 
     item = item.toLowerCase()
 
@@ -11,7 +11,7 @@ const rps = ({ target, context, msg, command }): Reply => {
         scissors: { l: 'rock', w: 'paper' }
     }
 
-    if (!(item in items)) return { msg: 'Enter a valid item (Rock, Paper, Scissors)' }
+    if (!(item in items)) return { msg: 'Enter a valid item (Rock, Paper, Scissors), ' }
 
     const botPick = Object.keys(items)[Math.floor(Math.random() * Object.keys(items).length)]
     let response = '';
@@ -24,7 +24,7 @@ const rps = ({ target, context, msg, command }): Reply => {
         response = `We both picked ${item}, it's a tie FeelsWeirdMan `
     }
 
-    return { msg: response + ',' }
+    return { msg: response }
 }
 
 export default rps

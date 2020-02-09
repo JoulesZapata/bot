@@ -12,13 +12,19 @@ const fight = async ({ target, context, msg, command }): Promise<Reply> => {
     if (!users.includes(enemy)) return { msg: 'User not found, try fighting someone else,' }
     enemy = enemy.replace(/@/g, '')
 
+    for (const fight of fights) {
+        if (fight.user === enemy || fight.enemy === enemy) {
+            return { msg: 'User is alright in a fight, try fighting someone else,' }
+        }
+    }
+
     fights.push({
         user: context.username,
         enemy
     })
 
     return {
-        msg: `@${enemy}, you've have been challanged to a fight by`,
+        msg: `@${enemy}, you've have been challenged to a fight by`,
         append: '( _accept or _reject )'
     }
 }
