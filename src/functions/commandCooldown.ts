@@ -1,12 +1,14 @@
-let cooldowns = []
+let cooldowns: Record<string, Array<string>> = {}
 
-export const coolDown = (command): boolean => {
-    if (!cooldowns.includes(command)) {
-        cooldowns.push(command)
+const cd = 7000
+
+export const coolDown = (channel, command): boolean => {
+    if (!cooldowns[channel].includes(command)) {
+        cooldowns[channel].push(command)
 
         setTimeout((command) => {
-            cooldowns = cooldowns.filter(c => c !== command)
-        }, 5000, command)
+            cooldowns[channel] = cooldowns[channel].filter(c => c !== command)
+        }, cd, command)
 
         return false
     } else {
