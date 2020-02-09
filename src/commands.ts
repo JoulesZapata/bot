@@ -1,10 +1,12 @@
 import rps from './commandData/rps'
 import { fight, accept, reject } from './commandData/fight'
 import creator from './commandData/creator'
-import help from './commandData/help'
+import commands from './commandData/commands'
+import call from './commandData/call'
 
-export const commands: { [k: string]: Function } = {
-    help,
+export const commands_: { [k: string]: Function } = {
+    commands,
+    call,
     rps,
     //fight
     fight,

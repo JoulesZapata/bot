@@ -1,4 +1,5 @@
 export default [
-    "getpost",
-    "DatBoiKappacino"
+    //"getpost",
+    //"DatBoiKappacino",
+    "Yedbuck"
 ]

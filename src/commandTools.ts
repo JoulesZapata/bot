@@ -1,4 +1,4 @@
-import { commands } from './commands'
+import { commands_ } from './commands'
 import { coolDown } from './functions/commandCooldown'
 
 const prefix = '_'
@@ -7,7 +7,7 @@ export const isCommand = (msg: string): string => {
     if (msg[0] === prefix) {
         let command = msg.split(' ')[0]
         command = command.substr(1)
-        if (command in commands) {
+        if (command in commands_) {
             return command
         }
     }
@@ -19,5 +19,5 @@ export const runCommand = async ({ target, context, msg, command }): Promise<Rep
     if (coolDown(target, command)) {
         return { msg: 'cooldown', cooldown: true }
     }
-    return await commands[command]({ target, context, msg, command })
+    return await commands_[command]({ target, context, msg, command })
 }
