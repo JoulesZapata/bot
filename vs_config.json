@@ -1,0 +1,42 @@
+{
+    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "beautify.language": {
+        "js": {
+            "type": [
+                "javascript",
+                "json",
+                "jsonc",
+                "js"
+            ],
+            "filename": [
+                ".jshintrc",
+                ".jsbeautifyrc"
+            ]
+        },
+        "css": [
+            "css",
+            "less",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html",
+            "svelte"
+        ]
+    },
+    "files.exclude": {
+        "dist": true,
+        "package-lock.json": true,
+        "package.json": true,
+        "**/bot.ts": true,
+        "**/bot.js": true,
+        "node_modules": true,
+        "tsconfig.json": true,
+        ".gitignore": true
+    },
+    "window.zoomLevel": 0
+}
