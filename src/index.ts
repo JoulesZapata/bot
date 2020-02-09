@@ -41,7 +41,7 @@ bot.on('chat', async (target, context, msg, self) => {
 
 bot.on("join", async (channel, username, self) => {
     if (self) {
-        bot.say(channel, 'hi :)')
+        //bot.say(channel, 'hi :)')
         await getChatters(channel.replace('#', ''))
     }
     newChatter(channel.replace('#', ''), username)
