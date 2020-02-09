@@ -2,15 +2,14 @@ import { client } from 'tmi.js'
 import { username, password } from './bot'
 import { isCommand, runCommand } from './commandTools'
 import { newChatter, removeChatter, getChatters } from './functions/getChatters'
+import channels from './channels'
 
 const opts = {
     identity: {
         username,
         password
     },
-    channels: [
-        "getpost"
-    ]
+    channels
 }
 
 const bot = client(opts);
@@ -42,6 +41,7 @@ bot.on('chat', async (target, context, msg, self) => {
 
 bot.on("join", async (channel, username, self) => {
     if (self) {
+        bot.say(channel, 'hi :)')
         await getChatters(channel.replace('#', ''))
     }
     newChatter(channel.replace('#', ''), username)
