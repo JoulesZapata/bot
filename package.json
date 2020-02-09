@@ -1,0 +1,17 @@
+{
+    "name": "bot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsc -w"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/tmi.js": "^1.4.0",
+        "tmi.js": "^1.5.0",
+        "typescript": "^3.7.5"
+    }
+}
